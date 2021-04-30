@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+    <title>Let'sFixtheWorld</title>
+    <link href = "style.css." rel ="stylesheet" type="text/css"/> 
+    <!-- ./style.css for location if it can't access the file -->
+  </head>
+  
+  <body>
+    <!-- <header> and </header> around h1-h6 tags is optional (actually idk it said that a website but the header applies to everything without it)-->
+    
+    <!-- indentation is optional in html but it does help with readibility --> 
+
+    <header>
+    <h1>Let's Fix the World!<h1>
+    </header>
+
+    <section id = "intro">
+      <p> Welcome to Let's fix the World! Here you will be able to find interesting articles, websites and videos that a shed light on the current global situation. 
+      </p> 
+      <a href="https://www.youtube.com/watch?v=KjlT4BME2aE" target= "_blank"> click here
+      </a>  
+
+    <section id = "Systemic Racism Topic"> 
+    <h2> Systemic Racism  <h2>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+    <section id = "Climate Change Topic"> 
+    <h2>  <h2>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+    <section id = "LGBQT "> 
+    <h2>  <h2>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+    <section id = ""> 
+    <h2>  <h2>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+      <h3> subtopic? </h3>
+    <section id = ""> 
+  </body>
+</html>
+
+<!-- Scrap Code
+        from browser input document
+        from browser input html
+          class Topic: 
+            def __init__(self, name, sub_topics, article_links = []):
+              self.name = name
+              self.sub_topics = sub_topics
+          
+class Subtopic(Topic): 
+    def __init__(self, name, article_links, sub_topics = []):
+      super().__init__(name, sub_topics)
+      self.article_links = article_links 
+
+#Brython Notes in website.html
+
+
+## Climate Change Instances 
+coral_bleaching = Subtopic("coral bleaching", ["cb link 1", "cb link 2"])
+deforestation = Subtopic("deforestation",['d link 1','d link 2'])
+climate_change = Topic("Climate Change", [coral_bleaching, deforestation])
+
+## 
+
+## Systemic Racism
+wealth_gap = Subtopic("Wealth Gap", ["https://books.google.com/books?hl=en&lr=&id=ZhpPAAAAMAAJ&oi=fnd&pg=PR11&dq=institutional+racism+housing&ots=mzHGZMLvjr&sig=Ug4oIWsmLrRRwtns9jIbpv2Wbns#v=onepage&q=institutional%20racism%20housing&f=false", ""])
+employment = Subtopic("Employment", ["https://www.tandfonline.com/doi/abs/10.1080/13613324.2011.646255", "https://pure.northampton.ac.uk/en/publications/institutional-racism-in-the-academy-a-case-study]"])
+housing_discrimination = Subtopic("Housing Discrimination", ["https://www.tandfonline.com/doi/abs/10.1080/13613324.2011.646255", "https://heinonline.org/HOL/LandingPage?handle=hein.journals/illlr112&div=52&id=&page="])
+gov_surveillance = Subtopic("Government Surveillance", ["https://www.democracynow.org/2013/9/17/from_mosques_to_soccer_leagues_inside", "http://www.ap.org/Content/AP-In-The-News/2012/AP-series-about-NYPD-surveillance-wins-Pulitzer"])
+incarceration = Subtopic("Incarceration", ["https://www.huffpost.com/entry/the-new-jim-crow-a-mustre_b_3679076", "https://www.naacp.org/criminal-justice-fact-sheet/", "https://www.theatlantic.com/politics/archive/2014/10/mapping-the-new-jim-crow/381617/"])
+
+drug_arrests = Subtopic("Crime and Drug Arrests", ["https://www.nytimes.com/2014/07/29/opinion/high-time-the-injustice-of-marijuana-arrests.html?_r=0",
+"https://drugwarfacts.org/chapter/marijuana",
+"https://www.colorlines.com/tags/marijuana",
+]) #Subtopic of crime and is 3levels down in hierarchy
+crime = Subtopic("Crime", ["https://www.tandfonline.com/doi/abs/10.1080/10439463.2012.703198"], [drug_arrests])
+
+
+discriminatory_immigatrion = Subtopic("Immigration", ["http://www.aljazeera.com/indepth/opinion/2013/03/2013329115414268219.html", "https://www.colorlines.com/articles/how-racist-us-immigration-policy"])
+systemic_discrimination = Topic("Systemetic Racism",[wealth_gap, employment, housing_discrimination, gov_surveillance, incarceration, crime, discriminatory_immigatrion])
+
+
+issues = [climate_change, systemic_discrimination]
+user_input = input("Search bar: \n").capitalize().strip()
+input_words = user_input.split()
+
+if input_words[0] == "List": #and input_words[1]== "Issues": 
+  print("Issues:")
+  for issue in issues: 
+    issue.recursive_topic_print()>
+
+
+            def recursive_topic_print(self):
+              if articles != []:
+                  for article in self.article_links: 
+                    print(article)
+              if self.sub_topics != []: 
+                    print(self.name)
+                    for subTopic in self.sub_topics: 
+                        subTopic.recursive_topic_print()
+        
+ <! script src="https://cdn.jsdelivr.net/npm/brython@3.8.9/brython.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/brython@3.8.9/brython_stdlib.js">
+</script>
+        </script> 
+
+
+         
+    <body onload="brython()"> <-- Goes outside of head -- >
+      <p id='zone'> </p> <-- id is an unique name for ca tag 
+      <script type="text/python"> 
+      -->
